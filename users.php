@@ -6,7 +6,7 @@
     <title>User</title>
 </head>
 <body>
-<div style="width: 60%; height:500px; background-color: rgb(33, 176, 78); color:white; margin: 0 auto!important; display: grid; grid-template-columns: 1fr 1fr; font-family: Arial, Helvetica, sans-serif;">
+<div style="width: 60%; height:300px; background-color: rgb(33, 176, 78); color:white; margin: 0 auto!important; display: grid; grid-template-columns: 1fr 1fr; font-family: Arial, Helvetica, sans-serif;">
 <!-- <div style="display:flex; justify-content: center; align-items:center; color:white">User</div> -->
 <!-- <div style="display:flex; justify-content: center; align-items:center"></div> -->
 <?php
