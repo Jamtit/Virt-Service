@@ -28,12 +28,10 @@ if (!$result) {
 while ($row = pg_fetch_row($result)) {
     $div1 = '<div style="display:flex; justify-content: center; align-items:center">' . $row[0] . '</div>';
 
-    // $div2 = '<div style="display:flex; justify-content: center; align-items:center">';
-    // $div2 .= '<a href="https://api.whatsapp.com/send?phone='. $row[1] .'">'. $row[1] .'</a></div>';
+// $CENDPOINT='https://grid5.mif.vu.lt/cloud3/RPC2'
+// shell_exec('onetemplate instantiate "debian11" --name '.$row[0].' --user '.$row[0].' --password '.$row[1]'  --endpoint '.$CENDPOINT.)
     
-
     echo $div1;
-    // echo $div2;
   }
 ?> 
 </div>
