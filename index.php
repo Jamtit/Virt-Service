@@ -444,7 +444,7 @@ h2.cp-title {
 				</a>
 			</li>
 			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-967 last depth-0">
-				<a href='server.html' data-level='1'>
+				<a href='server.php' data-level='1'>
 					<span class="menu-item-text">
 						<span class="menu-text">Servers</span>
 					</span>
