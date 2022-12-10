@@ -13,7 +13,7 @@
 
 include 'vars.php';
 
-$conn = pg_connect("host=10.0.0.169 port=5432 dbname=postgres user=postgres password=1234");
+$conn = pg_connect("host=".$ip. "port=5432 dbname=postgres user=postgres password=1234");
 if (!$conn) {
   echo "An error occurred.\n";
   exit;

@@ -1,0 +1,46 @@
+---
+- name: Configure the server, Download the files from Github
+  hosts: webserver
+  become: true
+  tasks:
+    - name: 0. Check the connection
+      ping:
+
+    - name: 1. Update Ubuntu
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+    - name: 2.1. Install Apache2
+      apt: name=apache2 state=latest
+
+    - name: 2.2. Install PHP
+      apt: name=libapache2-mod-php state=present
+
+    - name: 2.3. Install PHP modules
+      apt: name=php-pgsql
+
+    - name: 3. Remove all files and directories from /var/www/html
+      file:
+        state: "{{ item }}"
+        path: "/var/www/html"
+        owner: root
+        group: root
+        mode: "0755"
+      with_items:
+        - absent
+        - directory
+
+    - name: 4. Install Git
+      apt: name=git state=latest
+
+    - name: 5. Clone a public repository
+      git:
+        repo: https://github.com/Jamtit/Virt-Service.git
+        dest: /var/www/html
+        clone: yes
+        update: yes
+
+    - name: 6. Copy vars.php to webserver
+      copy:
+        src: ~/vars.php
+        dest: /var/www/html/
+~                               
